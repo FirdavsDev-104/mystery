@@ -1,0 +1,45 @@
+:root {
+  --pv-bg: #0B0E14;
+  --pv-surface: #121722;
+  --pv-surface-elevated: #18202F;
+  --pv-border: rgba(255, 255, 255, 0.08);
+  --pv-accent: #F59E0B;
+  --pv-accent-cyan: #06B6D4;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: var(--pv-bg);
+    color: #F1F5F9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Oxanium', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 0.01em;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
